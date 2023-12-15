@@ -1,27 +1,21 @@
 {
   "todos": [
     {
-      "id": 1,
-      "title": "할일1",
-      "content": "리액트 공부",
-      "isDone": false
-    },
-    {
       "id": 2,
       "title": "할일2",
       "content": "타입스크립트 공부",
       "isDone": true
     },
     {
-      "id": 3,
-      "title": "할일3",
-      "content": "쿼리 공부",
-      "isDone": false
-    },
-    {
       "id": "06c62392-2a5c-a19a-56f3-4ca8e3bd7a42",
       "title": "ㅇㅇ",
       "content": "ㅇㅇ",
+      "isDone": false
+    },
+    {
+      "id": "389a268f-c9bd-536a-ec50-1863b5550474",
+      "title": "dd",
+      "content": "dd",
       "isDone": false
     }
   ]

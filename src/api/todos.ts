@@ -15,20 +15,6 @@ const getTodos = async (): Promise<any> => {
   }
 };
 
-// const getTodos = async (): Promise<any> => {
-//   try {
-//     const response: AxiosResponse = await axios.get(
-//       `${process.env.REACT_APP_SERVER_URL}/todos`
-//     );
-
-//     console.log("get", response.data);
-//     return response.data;
-//   } catch (error) {
-//     console.error("Error in axios.get:", error);
-//     throw error;
-//   }
-// };
-
 // 추가
 const addTodo = async (newTodo: any): Promise<void> => {
   try {
@@ -45,7 +31,7 @@ const addTodo = async (newTodo: any): Promise<void> => {
 //삭제
 const deleteTodo = async (id: string): Promise<void> => {
   try {
-    await axios.delete(`${process.env.REACT_APP_SERVER_URL}/todos,${id}`);
+    await axios.delete(`${process.env.REACT_APP_SERVER_URL}/todos/${id}`);
   } catch (error) {
     console.error(console.log(error, "에러 발생"));
   }
@@ -54,7 +40,7 @@ const deleteTodo = async (id: string): Promise<void> => {
 // 스위치
 const switchTodo = async (id: string): Promise<void> => {
   try {
-    await axios.patch(`${process.env.REACT_APP_SERVER_URL}/todos,${id}`);
+    await axios.patch(`${process.env.REACT_APP_SERVER_URL}/todos/${id}`);
   } catch (error) {
     console.error(console.log(error, "에러 발생"));
   }

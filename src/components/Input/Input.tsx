@@ -11,7 +11,7 @@ export interface TList {
   isDone: boolean;
 }
 
-export default function Input() {
+const Input = () => {
   const [title, setTitle] = useState("");
   const [content, setContent] = useState("");
 
@@ -56,4 +56,6 @@ export default function Input() {
       </form>
     </div>
   );
-}
+};
+
+export default Input;

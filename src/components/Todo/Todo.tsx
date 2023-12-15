@@ -1,5 +1,7 @@
 import React from "react";
 
-export default function Todo() {
-  return <div></div>;
-}
+const Todo = () => {
+  return;
+};
+
+export default Todo;

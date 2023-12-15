@@ -3,7 +3,7 @@ import Footer from "../components/Footer/Footer";
 import Input from "../components/Input/Input";
 import TodoList from "../components/TodoList/TodoList";
 
-export default function HomePage() {
+const HomePage = () => {
   return (
     <>
       <Header />
@@ -12,4 +12,6 @@ export default function HomePage() {
       <Footer />
     </>
   );
-}
+};
+
+export default HomePage;
