@@ -5,7 +5,7 @@ export const StFooter = styled.div`
   left: 0;
   bottom: 0;
   width: 100%;
-  background-color: lightsalmon;
+  background-color: #73bbc9;
   color: white;
   text-align: center;
 `;

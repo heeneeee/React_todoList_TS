@@ -1,23 +1,22 @@
 {
   "todos": [
     {
-      "id": "06c62392-2a5c-a19a-56f3-4ca8e3bd7a42",
-      "title": "ㅇㅇ",
-      "content": "ㅇㅇ",
-      "isDone": true,
-      "true": ""
-    },
-    {
-      "id": "dbe7b7b1-5b7a-5902-59fc-72cd2d08fcd0",
-      "title": "리액트 쿼리",
-      "content": "끗",
-      "isDone": true
-    },
-    {
-      "id": "3627c6b8-ddff-aa03-205d-83db49e122b9",
-      "title": "엥?",
-      "content": "",
+      "id": "18b97632-5871-5224-d1c1-a8f7a3275c69",
+      "title": "리액트 공부하기",
+      "content": "리액트 쿼리 완료!",
       "isDone": false
+    },
+    {
+      "id": "62a6a84a-55e0-5517-f58c-c0a7aab36d0a",
+      "title": "타입스크립트 배우기",
+      "content": "TodoList 만들기",
+      "isDone": false
+    },
+    {
+      "id": "f608ab60-92c1-c5ab-4e94-9ac02af0bfa9",
+      "title": "리액트 공부하기",
+      "content": "리액트 Thunk 완료!",
+      "isDone": true
     }
   ]
 }

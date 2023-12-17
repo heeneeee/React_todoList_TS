@@ -1,6 +1,16 @@
 import { deleteTodo, getTodos, switchTodo } from "../../api/todos";
 import { useMutation, useQuery, useQueryClient } from "react-query";
 import type { TList } from "../Input/Input";
+import {
+  StTodoListWrapper,
+  StTodoContainer,
+  StTodo,
+  StBtns,
+  StBtn,
+  StTitle,
+  StContent,
+  StHaveToDoAndDone,
+} from "./style";
 
 const TodoList = () => {
   const { isLoading, isError, data } = useQuery<TList[]>("todos", getTodos);
@@ -38,34 +48,46 @@ const TodoList = () => {
   }
 
   return (
-    <div>
-      해야할 일
-      {data
-        .filter((item) => item.isDone === false)
-        .map((todo) => (
-          <div key={todo.id}>
-            <div>{todo.title}</div>
-            <div>{todo.content}</div>
-            <button onClick={() => onSwitchHandler(todo.id, todo.isDone)}>
-              완료
-            </button>
-            <button onClick={() => onDeleteHandler(todo.id)}>삭제</button>
-          </div>
-        ))}
-      완료한 일
-      {data
-        .filter((item) => item.isDone === true)
-        .map((todo) => (
-          <div key={todo.id}>
-            <div>{todo.title}</div>
-            <div>{todo.content}</div>
-            <button onClick={() => onSwitchHandler(todo.id, todo.isDone)}>
-              취소
-            </button>
-            <button onClick={() => onDeleteHandler(todo.id)}>삭제</button>
-          </div>
-        ))}
-    </div>
+    <StTodoListWrapper>
+      <StHaveToDoAndDone>Thing to do</StHaveToDoAndDone>
+      <StTodoContainer>
+        {data
+          .filter((item) => item.isDone === false)
+          .map((todo) => (
+            <StTodo>
+              <div key={todo.id}>
+                <StTitle>{todo.title}</StTitle>
+                <StContent>{todo.content}</StContent>
+                <StBtns>
+                  <StBtn onClick={() => onSwitchHandler(todo.id, todo.isDone)}>
+                    완 료
+                  </StBtn>
+                  <StBtn onClick={() => onDeleteHandler(todo.id)}>삭 제</StBtn>
+                </StBtns>
+              </div>
+            </StTodo>
+          ))}
+      </StTodoContainer>
+      <StHaveToDoAndDone>Work done</StHaveToDoAndDone>
+      <StTodoContainer>
+        {data
+          .filter((item) => item.isDone === true)
+          .map((todo) => (
+            <StTodo>
+              <div key={todo.id}>
+                <StTitle>{todo.title}</StTitle>
+                <StContent>{todo.content}</StContent>
+                <StBtns>
+                  <StBtn onClick={() => onSwitchHandler(todo.id, todo.isDone)}>
+                    취 소
+                  </StBtn>
+                  <StBtn onClick={() => onDeleteHandler(todo.id)}>삭 제</StBtn>
+                </StBtns>
+              </div>
+            </StTodo>
+          ))}
+      </StTodoContainer>
+    </StTodoListWrapper>
   );
 };
 

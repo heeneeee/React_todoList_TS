@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { StInput, StBtn } from "./style";
+import { StInput, StBtn, StFormWrapper } from "./style";
 import uuid from "react-uuid";
 import { useMutation, useQueryClient } from "react-query";
 import { addTodo } from "../../api/todos";
@@ -19,7 +19,7 @@ const Input = () => {
   const mutation = useMutation(addTodo, {
     onSuccess: () => {
       queryClient.invalidateQueries("todos"); //useQuery key 가 중요! // todos를 무효화
-      console.log("성공하였습니다!");
+      // console.log("성공하였습니다!");
     },
   });
 
@@ -31,6 +31,10 @@ const Input = () => {
   };
 
   const onSubmitHandler = (e: React.FormEvent<HTMLFormElement>): void => {
+    if (title === "" && content === "") {
+      alert("내용을 입력해주세요");
+      return;
+    }
     e.preventDefault();
     const newTodo: TList = {
       id: uuid(),
@@ -39,21 +43,27 @@ const Input = () => {
       isDone: false,
     };
     mutation.mutate(newTodo);
+
     setTitle("");
     setContent("");
   };
 
   return (
     <div>
-      <form onSubmit={onSubmitHandler}>
-        <StInput type="text" value={title} onChange={onTitleChangeHandler} />
+      <StFormWrapper onSubmit={onSubmitHandler}>
+        <StInput
+          type="text"
+          value={title}
+          onChange={onTitleChangeHandler}
+          autoFocus
+        />
         <StInput
           type="text"
           value={content}
           onChange={onContentChangeHandler}
         />
-        <StBtn type="submit">등록</StBtn>
-      </form>
+        <StBtn type="submit">등 록</StBtn>
+      </StFormWrapper>
     </div>
   );
 };

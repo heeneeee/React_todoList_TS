@@ -4,7 +4,7 @@ export default function Header() {
   return (
     <div>
       <StHeader>
-        <StTitle>TodoList</StTitle>
+        <StTitle>Heewon's TodoList</StTitle>
       </StHeader>
     </div>
   );

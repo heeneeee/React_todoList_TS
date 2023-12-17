@@ -21,7 +21,7 @@ const GlobalStyles = createGlobalStyle`
     body{
         line-height: 1;
         font-family: 'Noto Sans KR', sans-serif;
-        background-color: #FFFFFF;
+        background-color: #FCE9F1;
         margin-bottom: 100px;
     }
     ol, ul{
