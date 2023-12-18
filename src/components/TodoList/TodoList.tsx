@@ -19,14 +19,12 @@ const TodoList = () => {
   const queryClient = useQueryClient();
   const deleteMutation = useMutation(deleteTodo, {
     onSuccess: () => {
-      queryClient.invalidateQueries("todos"); //useQuery key 가 중요! // todos를 무효화
-      console.log("삭제 성공!");
+      queryClient.invalidateQueries("todos");
     },
   });
   const updateMutation = useMutation(switchTodo, {
     onSuccess: () => {
-      queryClient.invalidateQueries("todos"); //useQuery key 가 중요! // todos를 무효화
-      console.log("수정 성공!");
+      queryClient.invalidateQueries("todos");
     },
   });
 
@@ -34,7 +32,8 @@ const TodoList = () => {
   const onDeleteHandler = (id: string) => {
     deleteMutation.mutate(id);
   };
-  // 스위치 핸들러 (!isDone)
+
+  // 스위치 핸들러
   const onSwitchHandler = (id: string, isDone: boolean) => {
     updateMutation.mutate({ id, isDone: !isDone });
   };

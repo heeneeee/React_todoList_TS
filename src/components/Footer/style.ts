@@ -12,7 +12,7 @@ export const StFooter = styled.div`
 
 export const StFooterContents = styled.div`
   height: 50px;
-  font-size: 20px;
+  font-size: 15px;
   display: flex;
   justify-content: center;
   align-items: center;

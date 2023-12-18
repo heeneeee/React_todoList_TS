@@ -4,7 +4,7 @@ export default function Footer() {
   return (
     <div>
       <StFooter>
-        <StFooterContents>footer</StFooterContents>
+        <StFooterContents>Copyright ©</StFooterContents>
       </StFooter>
     </div>
   );

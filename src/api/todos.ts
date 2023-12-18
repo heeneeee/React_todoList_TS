@@ -39,7 +39,6 @@ const deleteTodo = async (id: string): Promise<void> => {
 
 // 스위치
 const switchTodo = async ({
-  // 하나의 인자만 넘겨줄 수 있으므로, 객체형태로 넘겨준다
   id,
   isDone,
 }: {
@@ -47,7 +46,6 @@ const switchTodo = async ({
   isDone: boolean;
 }): Promise<void> => {
   try {
-    //object 형태로 키, 밸류 값 넘겨준다
     await axios.patch(`${process.env.REACT_APP_SERVER_URL}/todos/${id}`, {
       isDone,
     });

@@ -18,8 +18,7 @@ const Input = () => {
   const queryClient = useQueryClient();
   const mutation = useMutation(addTodo, {
     onSuccess: () => {
-      queryClient.invalidateQueries("todos"); //useQuery key 가 중요! // todos를 무효화
-      // console.log("성공하였습니다!");
+      queryClient.invalidateQueries("todos");
     },
   });
 

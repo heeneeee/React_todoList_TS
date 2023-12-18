@@ -1,12 +1,6 @@
 {
   "todos": [
     {
-      "id": "18b97632-5871-5224-d1c1-a8f7a3275c69",
-      "title": "리액트 공부하기",
-      "content": "리액트 쿼리 완료!",
-      "isDone": false
-    },
-    {
       "id": "62a6a84a-55e0-5517-f58c-c0a7aab36d0a",
       "title": "타입스크립트 배우기",
       "content": "TodoList 만들기",
@@ -17,6 +11,12 @@
       "title": "리액트 공부하기",
       "content": "리액트 Thunk 완료!",
       "isDone": true
+    },
+    {
+      "id": "070650cd-3a82-dead-0c8a-402e0fe6d87d",
+      "title": "리액트 공부",
+      "content": "리액트 쿼리하기",
+      "isDone": false
     }
   ]
 }
