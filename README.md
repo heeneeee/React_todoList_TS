@@ -1,5 +1,7 @@
 프로젝트 소개
+<br/>
 프로젝트명 : TypeScript를 기반으로 한 react-query로 TodoList 만들기 
+<br/>
 개발 기간 : 2023.12.12-2023.12.16
 
 
